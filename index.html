@@ -15,7 +15,9 @@
     .mark { width: 56px; height: 56px; margin: 0 auto 20px; color: var(--tide); }
     h1 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.01em; }
     p.lede { margin: 14px auto 0; max-width: 440px; font-size: 16px; line-height: 1.55; color: var(--ink-2); }
-    .cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; padding: 13px 22px; border-radius: 10px; background: var(--tide); color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; box-shadow: 0 1px 2px rgba(16,24,40,.08), 0 6px 18px rgba(14,124,134,.18); transition: background .15s; }
+    .links { display: grid; gap: 10px; margin-top: 28px; text-align: left; }
+    .cta { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 10px; background: var(--tide); color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; }
+    .cta small { font-weight: 400; font-size: 13px; color: rgba(255,255,255,.86); }
     .cta:hover { background: var(--tide-dark); }
     .cta:focus-visible { outline: 3px solid rgba(14,124,134,.35); outline-offset: 3px; }
     ul.facts { list-style: none; padding: 0; margin: 32px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
@@ -34,11 +36,18 @@
         <path d="M9 17.5a7 7 0 0 1 14 0" fill="currentColor"/>
       </svg>
       <h1>AirClean</h1>
-      <p class="lede">The calm control room for holiday homes. Open the demo workspace as an admin. No sign-in, sample data only, and everything you change stays in this browser.</p>
-      <a class="cta" href="v2/">Open the demo workspace <span aria-hidden="true">&rarr;</span></a>
+      <p class="lede">The calm control room for holiday homes. Sample data only. Everything you change stays in this browser.</p>
+      <div class="links">
+        <a class="cta" href="v2/"><span>Current demo</span><small>Opens straight into the demo workspace.</small></a>
+        <a class="cta" href="v3/"><span>Multi-tenant preview</span><small>Master workspace, client accounts, and a place to create an organisation.</small></a>
+        <a class="cta" href="phh/"><span>Professional Holiday Homes</span><small>Opens straight into the PHH client account.</small></a>
+        <a class="cta" href="pr-1/"><span>Early check-in preview</span><small>The first settings preview.</small></a>
+        <a class="cta" href="pr-2/"><span>Preview pr-2</span><small>Earlier preview, left in place.</small></a>
+        <a class="cta" href="pr-4/"><span>Preview pr-4</span><small>Earlier preview, left in place.</small></a>
+      </div>
       <ul class="facts">
         <li>Desktop and mobile</li>
-        <li>Switch roles from the avatar</li>
+        <li>Demo sign-in on the multi-tenant preview</li>
         <li>Reset demo data any time</li>
       </ul>
     </div>
