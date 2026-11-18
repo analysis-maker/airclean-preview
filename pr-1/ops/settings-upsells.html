@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Settings</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../assets/icon-192.png">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../office.html"><img src="../assets/logo.svg" alt=""><strong data-brand="{productName} · Settings"></strong></a>
+      <nav class="nav">
+        <a href="../index.html">Today</a>
+        <a href="../office.html">Office</a>
+        <a href="../maintenance.html">Maintenance</a>
+        <a href="../ops/simulator.html">Simulator</a>
+        <a href="../ops/orders.html">Orders</a>
+      </nav>
+    </header>
+    <div class="tabs" role="tablist">
+      <button class="tab" type="button" disabled>My account</button>
+      <button class="tab" type="button" disabled>General</button>
+      <button class="tab" type="button" disabled>Phone</button>
+      <button class="tab" type="button" disabled>AI messaging</button>
+      <button class="tab" type="button" id="tab-upsells" aria-selected="true">Upsells</button>
+      <button class="tab" type="button" disabled>Widget</button>
+      <button class="tab" type="button" disabled>API</button>
+      <button class="tab" type="button" disabled>Users</button>
+      <button class="tab" type="button" disabled>Companies</button>
+    </div>
+    <p id="decision-banner" class="banner" hidden>Charging for early check-in is off in organisation decisions. This sample is switched on so the rules can be reviewed.</p>
+    <div class="scope">
+      <label for="scope">Editing</label>
+      <select id="scope"></select>
+    </div>
+    <form id="upsell-form" data-scope="global">
+      <section class="card" id="early-checkin">
+        <h2>Early check-in</h2>
+        <p class="lede">Guests can buy an earlier arrival. The price is a share of the nightly rate, or a fixed amount.</p>
+        <label class="check"><input id="offer-enabled" type="checkbox"> Offer early check-in</label>
+        <p class="inherit" data-inherit="enabled"></p>
+        <label class="custom-toggle"><input type="checkbox" data-custom="enabled"> Use custom value</label>
+        <p class="error" data-error-for="enabled"></p>
+
+        <h3>Timing</h3>
+        <div class="field">
+          <label for="earliest">Earliest arrival time</label>
+          <input id="earliest" type="time" value="09:00">
+          <p class="inherit" data-inherit="earliestArrivalTime"></p>
+          <label class="custom-toggle"><input type="checkbox" data-custom="earliestArrivalTime"> Use custom value</label>
+          <p class="error" data-error-for="earliestArrivalTime"></p>
+        </div>
+        <p class="inline">Guests can buy from
+          <input id="open-hours" type="number" min="0" max="168" value="16" aria-label="Hours before check-in when buying opens">
+          hours before check-in until
+          <input id="close-hours" type="number" min="0" max="168" value="1" aria-label="Hours before check-in when buying closes">
+          hour before check-in.
+        </p>
+        <label class="check"><input id="open-nolimit" type="checkbox"> No limit on when buying opens</label>
+        <label class="check"><input id="close-nolimit" type="checkbox"> No limit on when buying closes</label>
+        <p class="inherit" data-inherit="window"></p>
+        <label class="custom-toggle"><input type="checkbox" data-custom="window"> Use custom value</label>
+        <p class="error" data-error-for="window"></p>
+        <p class="error" data-error-for="window.opensHoursBefore"></p>
+        <p class="error" data-error-for="window.closesHoursBefore"></p>
+
+        <h3>Exceptions</h3>
+        <div class="checks">
+          <div>
+            <label class="check"><input id="ex-first" type="checkbox"> Not on the first day of the month</label>
+            <p class="inherit" data-inherit="exceptions.firstDayOfMonth"></p>
+            <label class="custom-toggle"><input type="checkbox" data-custom="exceptions.firstDayOfMonth"> Use custom value</label>
+          </div>
+          <div>
+            <label class="check"><input id="ex-last" type="checkbox"> Not on the last day of the month</label>
+            <p class="inherit" data-inherit="exceptions.lastDayOfMonth"></p>
+            <label class="custom-toggle"><input type="checkbox" data-custom="exceptions.lastDayOfMonth"> Use custom value</label>
+          </div>
+          <div>
+            <label class="check"><input id="ex-ready" type="checkbox"> Only when the property is ready (clean check submitted and complete)</label>
+            <p class="inherit" data-inherit="exceptions.onlyWhenReady"></p>
+            <label class="custom-toggle"><input type="checkbox" data-custom="exceptions.onlyWhenReady"> Use custom value</label>
+            <button class="btn btn-ghost" id="ready-help" type="button">How ready is decided</button>
+            <div id="ready-panel" class="help" hidden>
+              <p>A property counts as ready when all of these are true: the departure clean has been submitted, it is marked complete, the photo review is not a fail unless someone has agreed it, no pre-arrival inspection is still open, no pre-arrival maintenance is still open, and no open urgent maintenance job is on the property. A person can mark the property ready or place a hold, and that choice is logged. If the clean data is more than 3 hours old, or there is no clean record, the result is unknown and early check-in stays closed.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Calendar: previous night</h3>
+        <p>When a guest buys an early check-in:</p>
+        <label class="radio"><input id="block-always" type="radio" name="block" value="always"> Always block the night before check-in</label>
+        <div class="radio">
+          <input id="block-over" type="radio" name="block" value="if_extension_over" checked>
+          <span class="inline">Block the night before only if they arrive more than
+            <span class="stepper">
+              <button id="block-dec" type="button" aria-label="Fewer hours">-</button>
+              <input id="block-threshold" type="number" min="1" max="12" value="1" aria-label="Hours early before the previous night is blocked">
+              <button id="block-inc" type="button" aria-label="More hours">+</button>
+            </span>
+            hour(s) early
+          </span>
+        </div>
+        <label class="radio"><input id="block-never" type="radio" name="block" value="never"> Never block the night before</label>
+        <p class="inherit" data-inherit="blockPolicy"></p>
+        <label class="custom-toggle"><input type="checkbox" data-custom="blockPolicy"> Use custom value</label>
+        <p class="error" data-error-for="blockPolicy.mode"></p>
+        <p class="error" data-error-for="blockPolicy.thresholdHours"></p>
+
+        <h3>Pricing</h3>
+        <label class="radio"><input id="price-smart" type="radio" name="pricing" value="smart" disabled> Smart pricing (coming later)</label>
+        <label class="radio"><input id="price-custom" type="radio" name="pricing" value="custom" checked> Set my own prices</label>
+        <p class="inherit" data-inherit="pricing.mode"></p>
+        <label class="custom-toggle"><input type="checkbox" data-custom="pricing.mode"> Use custom value</label>
+        <table class="tier-table">
+          <thead><tr><th>On</th><th>Arrive earlier by</th><th>Amount</th><th>Type</th><th></th></tr></thead>
+          <tbody>
+            <tr id="tier-1h">
+              <td><input id="tier-1h-on" type="checkbox" aria-label="1 hour on" checked></td>
+              <td>1 hour</td>
+              <td><input id="tier-1h-amount" type="number" min="0" step="0.01" value="10" aria-label="1 hour amount"></td>
+              <td><select id="tier-1h-type" aria-label="1 hour type"><option value="pct_nightly">% of nightly rate</option><option value="fixed" data-currency-label>Fixed amount (AUD)</option></select></td>
+              <td><p class="inherit" data-inherit="pricing.tiers.1h"></p><label class="custom-toggle"><input type="checkbox" data-custom="pricing.tiers.1h"> Use custom value</label></td>
+            </tr>
+            <tr id="tier-2h">
+              <td><input id="tier-2h-on" type="checkbox" aria-label="2 hours on" checked></td>
+              <td>2 hours</td>
+              <td><input id="tier-2h-amount" type="number" min="0" step="0.01" value="20" aria-label="2 hours amount"></td>
+              <td><select id="tier-2h-type" aria-label="2 hours type"><option value="pct_nightly">% of nightly rate</option><option value="fixed" data-currency-label>Fixed amount (AUD)</option></select></td>
+              <td><p class="inherit" data-inherit="pricing.tiers.2h"></p><label class="custom-toggle"><input type="checkbox" data-custom="pricing.tiers.2h"> Use custom value</label></td>
+            </tr>
+            <tr id="tier-3h">
+              <td><input id="tier-3h-on" type="checkbox" aria-label="3 hours on"></td>
+              <td>3 hours</td>
+              <td><input id="tier-3h-amount" type="number" min="0" step="0.01" value="30" aria-label="3 hours amount"></td>
+              <td><select id="tier-3h-type" aria-label="3 hours type"><option value="pct_nightly">% of nightly rate</option><option value="fixed" data-currency-label>Fixed amount (AUD)</option></select></td>
+              <td><p class="inherit" data-inherit="pricing.tiers.3h"></p><label class="custom-toggle"><input type="checkbox" data-custom="pricing.tiers.3h"> Use custom value</label></td>
+            </tr>
+            <tr id="tier-4p">
+              <td><input id="tier-4p-on" type="checkbox" aria-label="4 hours or more on" checked></td>
+              <td>4 hours or more</td>
+              <td><input id="tier-4p-amount" type="number" min="0" step="0.01" value="60" aria-label="4 hours or more amount"></td>
+              <td><select id="tier-4p-type" aria-label="4 hours or more type"><option value="pct_nightly">% of nightly rate</option><option value="fixed" data-currency-label>Fixed amount (AUD)</option></select></td>
+              <td><p class="inherit" data-inherit="pricing.tiers.4h+"></p><label class="custom-toggle"><input type="checkbox" data-custom="pricing.tiers.4h+"> Use custom value</label></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="error" data-error-for="pricing.tiers"></p>
+        <p class="error" data-error-for="pricing.tiers.1h.amount"></p>
+        <p id="example" class="lede"></p>
+
+        <h3>Offer it before arrival</h3>
+        <p class="inline">
+          <label class="check"><input id="proactive-on" type="checkbox" checked> Send guests an early check-in offer</label>
+          <input id="proactive-value" type="number" min="1" max="30" value="3" aria-label="How long before check-in to send the offer">
+          <select id="proactive-unit" aria-label="Offer unit">
+            <option value="days">days</option>
+            <option value="hours">hours</option>
+          </select>
+          before check-in.
+        </p>
+        <p class="inherit" data-inherit="proactive"></p>
+        <label class="custom-toggle"><input type="checkbox" data-custom="proactive"> Use custom value</label>
+        <p class="error" data-error-for="proactive.value"></p>
+        <p class="error" data-error-for="proactive.unit"></p>
+        <p class="lede">Messages are sent as <span data-brand="{companySenderName}"></span>.</p>
+      </section>
+      <div class="sticky actions">
+        <button class="btn btn-primary" id="save-settings" type="submit">Save</button>
+        <button class="btn btn-ghost" id="discard" type="button">Discard changes</button>
+        <button class="btn btn-ghost" id="history-toggle" type="button">View history</button>
+        <span id="save-status"></span>
+      </div>
+      <p id="form-errors" class="error"></p>
+      <div id="history-panel" class="card" hidden></div>
+    </form>
+
+    <details class="card" id="late-checkout">
+      <summary>Late check-out <span class="pill">Coming next</span></summary>
+      <fieldset disabled>
+        <p class="lede">The same shape as early check-in. It is not active yet.</p>
+        <label class="check"><input type="checkbox"> Offer late check-out</label>
+        <p>Block the following night:</p>
+        <label class="radio"><input type="radio" name="late-block" checked> Always block the night after check-out</label>
+        <label class="radio"><input type="radio" name="late-block"> Block the following night only if they leave more than 1 hour late</label>
+        <label class="radio"><input type="radio" name="late-block"> Never block the following night</label>
+        <p>Set my own prices: 1 hour, 2 hours, 3 hours, 4 hours or more.</p>
+        <label class="check"><input type="checkbox"> Send guests a late check-out offer before departure</label>
+      </fieldset>
+    </details>
+
+    <section class="card" id="listing-sets">
+      <h2>Listing sets</h2>
+      <p class="lede">Lower priority numbers win when a property is in more than one set. A property can sit in several sets.</p>
+      <div id="sets"></div>
+      <h3>New set</h3>
+      <div class="set-row">
+        <input id="set-name" type="text" placeholder="Set name" aria-label="New set name">
+        <input id="set-priority" type="number" value="50" aria-label="New set priority">
+        <select id="set-properties" multiple size="4" aria-label="Properties for the new set"></select>
+        <button class="btn btn-primary" id="set-create" type="button">Create set</button>
+      </div>
+      <p id="set-error" class="error"></p>
+    </section>
+  </div>
+  <script type="module">
+    import { bootSettings } from "../src/pages/settings.js";
+    bootSettings();
+  </script>
+</body>
+</html>

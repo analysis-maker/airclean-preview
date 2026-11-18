@@ -1,0 +1,131 @@
+[
+  {
+    "id": "p_seaside",
+    "name": "Seaside Cottage A",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 400,
+    "currency": "AUD",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "listingSetIds": [
+      "set_remote",
+      "set_pets"
+    ]
+  },
+  {
+    "id": "p_harbour",
+    "name": "Harbour Apartment, 3B",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 280,
+    "currency": "AUD",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "listingSetIds": [
+      "set_clustered"
+    ]
+  },
+  {
+    "id": "p_dune",
+    "name": "Dune House",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 650,
+    "currency": "AUD",
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "listingSetIds": [
+      "set_remote",
+      "set_large"
+    ]
+  },
+  {
+    "id": "p_ridge",
+    "name": "Ridge Cabin",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 520,
+    "currency": "AUD",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "listingSetIds": [
+      "set_remote"
+    ]
+  },
+  {
+    "id": "p_palm",
+    "name": "Palm Court 12",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 310,
+    "currency": "AUD",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "listingSetIds": [
+      "set_clustered",
+      "set_pets"
+    ]
+  },
+  {
+    "id": "p_wharf",
+    "name": "Wharf Loft 4",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 450,
+    "currency": "AUD",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "listingSetIds": [
+      "set_clustered"
+    ]
+  },
+  {
+    "id": "p_summit",
+    "name": "Summit Lodge",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 900,
+    "currency": "AUD",
+    "bedrooms": 6,
+    "bathrooms": 4,
+    "listingSetIds": [
+      "set_large"
+    ]
+  },
+  {
+    "id": "p_lantern",
+    "name": "Lantern Studio",
+    "tz": "Australia/Sydney",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 250,
+    "currency": "AUD",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "listingSetIds": [
+      "set_pets"
+    ]
+  },
+  {
+    "id": "p_canal",
+    "name": "Canal House 7",
+    "tz": "Europe/Amsterdam",
+    "stdCheckInTime": "15:00",
+    "stdCheckOutTime": "10:00",
+    "nightlyRate": 480,
+    "currency": "EUR",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "listingSetIds": [
+      "set_remote"
+    ]
+  }
+]

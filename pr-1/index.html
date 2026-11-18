@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Today</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><strong data-brand="{productName}"></strong></a>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">Today</a>
+        <a href="office.html">Office</a>
+        <a href="maintenance.html">Maintenance</a>
+      </nav>
+    </header>
+    <form id="sign-in" class="card sign-in">
+      <h1>Today's cleans</h1>
+      <p class="lede">Sample codes: DEMO-100 housekeeper, DEMO-200 office, DEMO-300 admin.</p>
+      <label for="code">Staff code</label>
+      <input id="code" name="code" autocomplete="off" placeholder="DEMO-100">
+      <p id="sign-error" class="error"></p>
+      <button class="btn btn-primary" type="submit">Continue</button>
+    </form>
+    <section id="signed-in" hidden>
+      <h1>Today</h1>
+      <p class="lede"><span id="who"></span>, <span id="today-count">0</span> cleans on the demo day.</p>
+      <div id="cleans"></div>
+    </section>
+  </div>
+  <script type="module">
+    import { bootToday } from "src/pages/mirror.js";
+    bootToday();
+  </script>
+</body>
+</html>

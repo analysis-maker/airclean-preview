@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Simulator</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../assets/icon-192.png">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../ops/settings-upsells.html"><img src="../assets/logo.svg" alt=""><strong data-brand="{productName} · Simulator"></strong></a>
+      <nav class="nav">
+        <a href="../office.html">Office</a>
+        <a href="../ops/settings-upsells.html">Upsells</a>
+        <a href="../ops/orders.html">Orders</a>
+      </nav>
+    </header>
+    <div class="split">
+      <form class="card" id="sim-form">
+        <h2>Try a stay</h2>
+        <div class="field">
+          <label for="sim-reservation">Reservation</label>
+          <select id="sim-reservation"></select>
+        </div>
+        <div class="field">
+          <label for="sim-now">Now, in the property time zone</label>
+          <input id="sim-now" type="datetime-local">
+        </div>
+        <div class="field">
+          <label for="sim-arrival">Requested arrival</label>
+          <input id="sim-arrival" type="time" value="14:00">
+        </div>
+        <div class="field">
+          <label for="sim-readiness">Readiness</label>
+          <select id="sim-readiness">
+            <option value="auto">Auto from sample data</option>
+            <option value="READY">READY</option>
+            <option value="NOT_READY">NOT_READY</option>
+            <option value="UNKNOWN">UNKNOWN</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sim-prev">Previous night</label>
+          <select id="sim-prev">
+            <option value="auto">Auto from sample calendar</option>
+            <option value="vacant">Vacant</option>
+            <option value="booked">Booked</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </div>
+        <label class="check"><input id="sim-race" type="checkbox"> Mark the previous night booked after the quote</label>
+        <div class="actions">
+          <button class="btn btn-primary" id="sim-run" type="button">Run</button>
+          <button class="btn btn-ghost" id="sim-buy" type="button">Simulate purchase</button>
+        </div>
+      </form>
+      <div>
+        <section class="card">
+          <h2>Result</h2>
+          <p id="sim-summary" class="summary"></p>
+          <h3>Guest would see</h3>
+          <p id="sim-guest" class="guest-preview"></p>
+          <p>Price: <strong id="sim-price"></strong></p>
+          <p>Calendar: <strong id="sim-calendar"></strong></p>
+          <p>Payment: <strong id="sim-payment"></strong></p>
+          <p>Offer: <strong id="sim-offer"></strong></p>
+          <h3>Where the rule comes from</h3>
+          <pre id="sim-sources"></pre>
+          <h3>Purchase</h3>
+          <p id="sim-purchase">Purchase has not been run.</p>
+        </section>
+        <section class="card">
+          <h2>Decision</h2>
+          <pre id="sim-json" class="json"></pre>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { bootSimulator } from "../src/pages/simulator.js";
+    bootSimulator();
+  </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+[
+  {
+    "key": "upsells",
+    "value": {
+      "global": {
+        "id": "global",
+        "version": 1,
+        "updated_by": "Demo Admin",
+        "updated_at": "2026-11-01T00:00:00.000Z",
+        "settings": {
+          "enabled": true,
+          "earliestArrivalTime": "09:00",
+          "window": {
+            "opensHoursBefore": 16,
+            "closesHoursBefore": 1
+          },
+          "exceptions": {
+            "firstDayOfMonth": false,
+            "lastDayOfMonth": false,
+            "onlyWhenReady": false
+          },
+          "blockPolicy": {
+            "mode": "if_extension_over",
+            "thresholdHours": 1
+          },
+          "pricing": {
+            "mode": "custom",
+            "tiers": [
+              {
+                "key": "1h",
+                "hours": 1,
+                "enabled": true,
+                "amount": 10,
+                "type": "pct_nightly"
+              },
+              {
+                "key": "2h",
+                "hours": 2,
+                "enabled": true,
+                "amount": 20,
+                "type": "pct_nightly"
+              },
+              {
+                "key": "3h",
+                "hours": 3,
+                "enabled": false,
+                "amount": 30,
+                "type": "pct_nightly"
+              },
+              {
+                "key": "4h+",
+                "hours": 4,
+                "enabled": true,
+                "amount": 60,
+                "type": "pct_nightly"
+              }
+            ]
+          },
+          "proactive": {
+            "enabled": true,
+            "value": 3,
+            "unit": "days"
+          }
+        }
+      },
+      "listingSets": {
+        "set_remote": {
+          "version": 2,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-02T00:00:00.000Z",
+          "settings": {
+            "exceptions": {
+              "onlyWhenReady": true
+            },
+            "blockPolicy": {
+              "mode": "always"
+            },
+            "earliestArrivalTime": "08:30"
+          }
+        },
+        "set_clustered": {
+          "version": 1,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-02T01:00:00.000Z",
+          "settings": {
+            "blockPolicy": {
+              "mode": "if_extension_over",
+              "thresholdHours": 2
+            }
+          }
+        },
+        "set_pets": {
+          "version": 1,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-03T00:00:00.000Z",
+          "settings": {
+            "earliestArrivalTime": "10:00",
+            "exceptions": {
+              "onlyWhenReady": false
+            }
+          }
+        },
+        "set_large": {
+          "version": 1,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-03T01:00:00.000Z",
+          "settings": {
+            "proactive": {
+              "enabled": true,
+              "value": 5,
+              "unit": "days"
+            }
+          }
+        }
+      },
+      "properties": {
+        "p_harbour": {
+          "version": 1,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-04T00:00:00.000Z",
+          "settings": {
+            "exceptions": {
+              "lastDayOfMonth": true
+            }
+          }
+        },
+        "p_ridge": {
+          "version": 1,
+          "updated_by": "Demo Admin",
+          "updated_at": "2026-11-04T01:00:00.000Z",
+          "settings": {
+            "blockPolicy": {
+              "mode": "never"
+            }
+          }
+        }
+      }
+    },
+    "note": "Sample upsell rules for review.",
+    "updated_by": "Demo Admin",
+    "updated_at": "2026-11-04T01:00:00.000Z"
+  }
+]

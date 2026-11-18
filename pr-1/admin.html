@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Users</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="admin.html"><img src="assets/logo.svg" alt=""><strong data-brand="{productName} · Users"></strong></a>
+      <nav class="nav">
+        <a href="office.html">Office</a>
+        <a href="admin.html" aria-current="page">Users</a>
+        <a href="staging/manager.html">Manager (staging)</a>
+      </nav>
+    </header>
+    <section class="card">
+      <h1>Codes and users</h1>
+      <p class="lede">Sample people only. Two-factor sign-in is marked where it will be required. It is not built in this phase.</p>
+      <table class="data">
+        <thead><tr><th>Name</th><th>Role</th><th>Code</th><th>Two-factor</th><th>Status</th></tr></thead>
+        <tbody id="users"></tbody>
+      </table>
+      <p class="lede">Access release is held for a person. This app cannot send entry details.</p>
+    </section>
+  </div>
+  <script type="module">
+    import { bootAdmin } from "src/pages/mirror.js";
+    bootAdmin();
+  </script>
+</body>
+</html>

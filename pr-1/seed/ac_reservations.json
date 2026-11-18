@@ -1,0 +1,222 @@
+[
+  {
+    "id": "TEST-R-01",
+    "propertyId": "p_seaside",
+    "channel": "direct",
+    "checkInDate": "2026-12-10",
+    "checkOutDate": "2026-12-14",
+    "nightlyRate": 400,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-01",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-02",
+    "propertyId": "p_harbour",
+    "channel": "direct",
+    "checkInDate": "2026-12-10",
+    "checkOutDate": "2026-12-13",
+    "nightlyRate": 280,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-02",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-03",
+    "propertyId": "p_dune",
+    "channel": "airbnb",
+    "checkInDate": "2026-12-12",
+    "checkOutDate": "2026-12-16",
+    "nightlyRate": 650,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-03",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-04",
+    "propertyId": "p_wharf",
+    "channel": "booking",
+    "checkInDate": "2026-12-15",
+    "checkOutDate": "2026-12-18",
+    "nightlyRate": 450,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-04",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-05",
+    "propertyId": "p_palm",
+    "channel": "direct",
+    "checkInDate": "2026-12-18",
+    "checkOutDate": "2026-12-21",
+    "nightlyRate": 310,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-05",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-06",
+    "propertyId": "p_palm",
+    "channel": "direct",
+    "checkInDate": "2027-01-08",
+    "checkOutDate": "2027-01-11",
+    "nightlyRate": 310,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-06",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-07",
+    "propertyId": "p_ridge",
+    "channel": "direct",
+    "checkInDate": "2026-11-20",
+    "checkOutDate": "2026-11-23",
+    "nightlyRate": 520,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-07",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-08",
+    "propertyId": "p_summit",
+    "channel": "airbnb",
+    "checkInDate": "2026-11-22",
+    "checkOutDate": "2026-11-26",
+    "nightlyRate": 900,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-08",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-09",
+    "propertyId": "p_ridge",
+    "channel": "direct",
+    "checkInDate": "2026-12-05",
+    "checkOutDate": "2026-12-08",
+    "nightlyRate": 520,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-09",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-10",
+    "propertyId": "p_summit",
+    "channel": "direct",
+    "checkInDate": "2026-12-20",
+    "checkOutDate": "2026-12-24",
+    "nightlyRate": 900,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-10",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-11",
+    "propertyId": "p_lantern",
+    "channel": "direct",
+    "checkInDate": "2026-12-22",
+    "checkOutDate": "2026-12-24",
+    "nightlyRate": 250,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-11",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-12",
+    "propertyId": "p_seaside",
+    "channel": "direct",
+    "checkInDate": "2026-10-04",
+    "checkOutDate": "2026-10-07",
+    "nightlyRate": 400,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-12",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-13",
+    "propertyId": "p_harbour",
+    "channel": "booking",
+    "checkInDate": "2026-12-01",
+    "checkOutDate": "2026-12-04",
+    "nightlyRate": 280,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-13",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-14",
+    "propertyId": "p_wharf",
+    "channel": "direct",
+    "checkInDate": "2026-12-31",
+    "checkOutDate": "2027-01-03",
+    "nightlyRate": 450,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-14",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-15",
+    "propertyId": "p_dune",
+    "channel": "direct",
+    "checkInDate": "2027-02-28",
+    "checkOutDate": "2027-03-03",
+    "nightlyRate": 650,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-15",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-16",
+    "propertyId": "p_canal",
+    "channel": "airbnb",
+    "checkInDate": "2027-03-04",
+    "checkOutDate": "2027-03-08",
+    "nightlyRate": 480,
+    "currency": "EUR",
+    "precedingCleanRes": "TEST-C-16",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-17",
+    "propertyId": "p_palm",
+    "channel": "vrbo",
+    "checkInDate": "2027-01-20",
+    "checkOutDate": "2027-01-24",
+    "nightlyRate": 310,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-17",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-18",
+    "propertyId": "p_wharf",
+    "channel": "direct",
+    "checkInDate": "2026-11-28",
+    "checkOutDate": "2026-12-02",
+    "nightlyRate": 450,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-18",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-19",
+    "propertyId": "p_summit",
+    "channel": "direct",
+    "checkInDate": "2027-02-14",
+    "checkOutDate": "2027-02-18",
+    "nightlyRate": 900,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-19",
+    "guestLabel": "(placeholder)"
+  },
+  {
+    "id": "TEST-R-20",
+    "propertyId": "p_ridge",
+    "channel": "airbnb",
+    "checkInDate": "2027-03-01",
+    "checkOutDate": "2027-03-04",
+    "nightlyRate": 520,
+    "currency": "AUD",
+    "precedingCleanRes": "TEST-C-20",
+    "guestLabel": "(placeholder)"
+  }
+]

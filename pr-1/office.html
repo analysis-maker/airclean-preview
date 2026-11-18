@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Office</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="office.html"><img src="assets/logo.svg" alt=""><strong data-brand="{productName} · Office"></strong></a>
+      <nav class="nav">
+        <a href="index.html">Today</a>
+        <a href="office.html" aria-current="page">Office</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="admin.html">Users</a>
+        <a href="ops/settings-upsells.html">Upsells</a>
+      </nav>
+    </header>
+    <section class="card">
+      <h1>Cleans</h1>
+      <p class="lede">Back to back stays are highlighted. Coming up is the next arrival. Readiness uses the sample clean records.</p>
+      <div class="actions">
+        <label for="office-date">Date</label>
+        <input id="office-date" type="date">
+        <a class="btn btn-primary" href="ops/settings-upsells.html">Upsells settings</a>
+      </div>
+      <p id="office-count"></p>
+      <table class="data">
+        <thead>
+          <tr><th>Property</th><th>Status</th><th>Back to back</th><th>Coming up</th><th>Readiness</th></tr>
+        </thead>
+        <tbody id="office-body"></tbody>
+      </table>
+    </section>
+  </div>
+  <script type="module">
+    import { bootOffice } from "src/pages/mirror.js";
+    bootOffice();
+  </script>
+</body>
+</html>

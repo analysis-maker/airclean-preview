@@ -1,0 +1,7 @@
+{
+  "chargeForEarlyCheckin": false,
+  "readinessStrictness": "lenient",
+  "proactiveWhenBlockedTurn": "queue_until_ready",
+  "writeBackToBookingSystem": false,
+  "stripeLiveAccounts": false
+}
