@@ -1,26 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Previews</title>
+  <meta name="theme-color" content="#F6F5F1">
+  <title>AirClean preview</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f3efe6; color: #1c2830; }
-    .banner { margin: 0; padding: 10px 16px; background: #8d3d32; color: #fffdf9; font-weight: 700; text-align: center; }
-    main { max-width: 640px; margin: 0 auto; padding: 24px; }
-    a { color: #0e6b66; }
+    :root { --tide: #0E7C86; --tide-dark: #0A626A; --ink: #16222B; --ink-2: #4A5863; --bg: #F6F5F1; --line: #E4E1D8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); display: flex; flex-direction: column; }
+    .bar { padding: 8px 16px; text-align: center; font-size: 13px; color: var(--ink-2); border-bottom: 1px solid var(--line); background: #fff; }
+    main { flex: 1; display: grid; place-items: center; padding: 48px 24px; }
+    .card { width: 100%; max-width: 560px; text-align: center; }
+    .mark { width: 56px; height: 56px; margin: 0 auto 20px; color: var(--tide); }
+    h1 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.01em; }
+    p.lede { margin: 14px auto 0; max-width: 440px; font-size: 16px; line-height: 1.55; color: var(--ink-2); }
+    .cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; padding: 13px 22px; border-radius: 10px; background: var(--tide); color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; box-shadow: 0 1px 2px rgba(16,24,40,.08), 0 6px 18px rgba(14,124,134,.18); transition: background .15s; }
+    .cta:hover { background: var(--tide-dark); }
+    .cta:focus-visible { outline: 3px solid rgba(14,124,134,.35); outline-offset: 3px; }
+    ul.facts { list-style: none; padding: 0; margin: 32px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    ul.facts li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: 13px; color: var(--ink-2); }
+    footer { padding: 20px; text-align: center; font-size: 12px; color: var(--ink-2); }
   </style>
 </head>
 <body>
-  <p class="banner">PREVIEW, sample data only</p>
+  <div class="bar">Demo workspace, sample data only</div>
   <main>
-    <h1>Previews</h1>
-    <p>Each link opens that pull request on sample data. Saves stay in this browser.</p>
-    <ul>
-        <li><a href="pr-1/">PR 1</a></li>
-        <li><a href="pr-2/">PR 2</a></li>
-        <li><a href="pr-4/">PR 4</a></li>
-    </ul>
+    <div class="card">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2.2"/>
+        <path d="M3.5 17.5h25" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M6.5 21.5h19M10 25.5h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M9 17.5a7 7 0 0 1 14 0" fill="currentColor"/>
+      </svg>
+      <h1>AirClean</h1>
+      <p class="lede">The calm control room for holiday homes. Open the demo workspace as an admin. No sign-in, sample data only, and everything you change stays in this browser.</p>
+      <a class="cta" href="v2/">Open the demo workspace <span aria-hidden="true">&rarr;</span></a>
+      <ul class="facts">
+        <li>Desktop and mobile</li>
+        <li>Switch roles from the avatar</li>
+        <li>Reset demo data any time</li>
+      </ul>
+    </div>
   </main>
+  <footer>Preview build. No real guests, codes or payments.</footer>
 </body>
 </html>
