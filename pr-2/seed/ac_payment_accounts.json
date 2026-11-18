@@ -1,0 +1,39 @@
+{
+  "accounts": [
+    {
+      "id": "pa_south",
+      "label": "Operating South",
+      "provider": "stripe",
+      "secret_ref": null,
+      "listingSetIds": [
+        "set_clustered",
+        "set_large"
+      ],
+      "propertyIds": [],
+      "isDefault": false
+    },
+    {
+      "id": "pa_north",
+      "label": "Operating North",
+      "provider": "stripe",
+      "secret_ref": null,
+      "listingSetIds": [
+        "set_remote"
+      ],
+      "propertyIds": [],
+      "isDefault": false
+    },
+    {
+      "id": "pa_default",
+      "label": "Default",
+      "provider": "stripe",
+      "secret_ref": null,
+      "listingSetIds": [],
+      "propertyIds": [],
+      "isDefault": true
+    }
+  ],
+  "unmappedPropertyIds": [
+    "p_lantern"
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Orders</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../assets/icon-192.png">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="../ops/settings-upsells.html"><img src="../assets/logo.svg" alt=""><strong data-brand="{productName} · Orders"></strong></a>
+      <nav class="nav">
+        <a href="../office.html">Office</a>
+        <a href="../ops/settings-upsells.html">Upsells</a>
+        <a href="../ops/simulator.html">Simulator</a>
+      </nav>
+    </header>
+    <section class="card">
+      <h2>Early check-in orders</h2>
+      <p class="lede">Sample orders for finance. Export one month at a time, in the property time zone.</p>
+      <div class="actions">
+        <label for="month">Month</label>
+        <input id="month" type="month" value="2026-11">
+        <button class="btn btn-primary" id="export-csv" type="button">Export CSV</button>
+        <span><span id="orders-count">0</span> orders, total <strong id="orders-total"></strong></span>
+      </div>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Order</th><th>Created</th><th>Property id</th><th>Property</th><th>Listing set</th>
+            <th>Reservation</th><th>Channel</th><th>Product</th><th>Hours</th><th>Tier</th>
+            <th>Amount</th><th>Currency</th><th>Route</th><th>Account</th><th>Status</th><th>Calendar</th>
+          </tr>
+        </thead>
+        <tbody id="orders-body"></tbody>
+      </table>
+    </section>
+  </div>
+  <script type="module">
+    import { bootOrders } from "../src/pages/orders.js";
+    bootOrders();
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+[
+  {
+    "reservationId": "TEST-R-01",
+    "propertyId": "p_seaside",
+    "night": "2026-12-09",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-02",
+    "propertyId": "p_harbour",
+    "night": "2026-12-09",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-03",
+    "propertyId": "p_dune",
+    "night": "2026-12-11",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-04",
+    "propertyId": "p_wharf",
+    "night": "2026-12-14",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-05",
+    "propertyId": "p_palm",
+    "night": "2026-12-17",
+    "status": "booked",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-06",
+    "propertyId": "p_palm",
+    "night": "2027-01-07",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-07",
+    "propertyId": "p_ridge",
+    "night": "2026-11-19",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-08",
+    "propertyId": "p_summit",
+    "night": "2026-11-21",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-09",
+    "propertyId": "p_ridge",
+    "night": "2026-12-04",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-10",
+    "propertyId": "p_summit",
+    "night": "2026-12-19",
+    "status": "booked",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-11",
+    "propertyId": "p_lantern",
+    "night": "2026-12-21",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-12",
+    "propertyId": "p_seaside",
+    "night": "2026-10-03",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-13",
+    "propertyId": "p_harbour",
+    "night": "2026-11-30",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-14",
+    "propertyId": "p_wharf",
+    "night": "2026-12-30",
+    "status": "blocked",
+    "blockReason": "owner"
+  },
+  {
+    "reservationId": "TEST-R-15",
+    "propertyId": "p_dune",
+    "night": "2027-02-27",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-16",
+    "propertyId": "p_canal",
+    "night": "2027-03-03",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-17",
+    "propertyId": "p_palm",
+    "night": "2027-01-19",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-18",
+    "propertyId": "p_wharf",
+    "night": "2026-11-27",
+    "status": "booked",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-19",
+    "propertyId": "p_summit",
+    "night": "2027-02-13",
+    "status": "vacant",
+    "blockReason": ""
+  },
+  {
+    "reservationId": "TEST-R-20",
+    "propertyId": "p_ridge",
+    "night": "2027-02-28",
+    "status": "vacant",
+    "blockReason": ""
+  }
+]
