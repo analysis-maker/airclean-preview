@@ -1,0 +1,32 @@
+[
+  {
+    "job_id": 1,
+    "area_name": "Lantern Studio",
+    "message": "Cooktop light reported as not switching on",
+    "status": "open",
+    "priority": "urgent",
+    "date_created": "2026-12-18",
+    "synced_at": "2026-12-18T09:00:00+11:00",
+    "property_id": "p_lantern"
+  },
+  {
+    "job_id": 2,
+    "area_name": "Seaside Cottage A",
+    "message": "Gate hinge was reported and has been closed",
+    "status": "closed",
+    "priority": "urgent",
+    "date_created": "2026-11-02",
+    "synced_at": "2026-11-03T09:00:00+11:00",
+    "property_id": "p_seaside"
+  },
+  {
+    "job_id": 3,
+    "area_name": "Harbour Apartment, 3B",
+    "message": "Bathroom fan is noisy",
+    "status": "open",
+    "priority": "low",
+    "date_created": "2026-12-01",
+    "synced_at": "2026-12-01T09:00:00+11:00",
+    "property_id": "p_harbour"
+  }
+]

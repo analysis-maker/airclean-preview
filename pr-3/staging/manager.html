@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="phh-build" content="20261118.1">
+  <title>Manager</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="../assets/icon-192.png">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="manager.html"><img src="../assets/logo.svg" alt=""><strong data-brand="{productName} · Manager"></strong></a>
+      <nav class="nav">
+        <a href="../admin.html">Users</a>
+        <a href="../office.html">Office</a>
+      </nav>
+    </header>
+    <section class="card">
+      <h1>Housekeeping manager</h1>
+      <p class="lede">Staging only. This view is a placeholder for a later phase. It is not linked from the housekeeper's today page.</p>
+    </section>
+  </div>
+  <script type="module">
+    import { bootManager } from "../src/pages/mirror.js";
+    bootManager();
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "code": "DEMO-100",
+    "role": "housekeeper",
+    "name": "Cleaner A",
+    "twoFactorRequired": false
+  },
+  {
+    "code": "DEMO-200",
+    "role": "office",
+    "name": "Office A",
+    "twoFactorRequired": true
+  },
+  {
+    "code": "DEMO-300",
+    "role": "admin",
+    "name": "Admin A",
+    "twoFactorRequired": true
+  }
+]

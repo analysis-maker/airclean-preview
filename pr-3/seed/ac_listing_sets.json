@@ -1,0 +1,42 @@
+[
+  {
+    "id": "set_clustered",
+    "name": "Clustered buildings (easy to re-order cleans)",
+    "priority": 10,
+    "propertyIds": [
+      "p_harbour",
+      "p_palm",
+      "p_wharf"
+    ]
+  },
+  {
+    "id": "set_remote",
+    "name": "Remote single homes",
+    "priority": 20,
+    "propertyIds": [
+      "p_seaside",
+      "p_dune",
+      "p_ridge",
+      "p_canal"
+    ]
+  },
+  {
+    "id": "set_large",
+    "name": "Large homes 5+ bedrooms",
+    "priority": 30,
+    "propertyIds": [
+      "p_dune",
+      "p_summit"
+    ]
+  },
+  {
+    "id": "set_pets",
+    "name": "Pet-friendly",
+    "priority": 40,
+    "propertyIds": [
+      "p_seaside",
+      "p_palm",
+      "p_lantern"
+    ]
+  }
+]

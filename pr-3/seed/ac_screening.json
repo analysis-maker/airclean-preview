@@ -1,0 +1,57 @@
+[
+  {
+    "id": "scr-last-minute",
+    "propertyName": "Seaside Cottage A",
+    "checkInDate": "2026-12-10",
+    "stdCheckInTime": "15:00",
+    "tz": "Australia/Sydney",
+    "bookedAt": "2026-12-09T20:00:00.000Z",
+    "country": "AU",
+    "arrivalForm": "We arrive in the afternoon and will have two small bags.",
+    "guestsAdults": 2
+  },
+  {
+    "id": "scr-country",
+    "propertyName": "Dune House",
+    "checkInDate": "2026-12-12",
+    "stdCheckInTime": "15:00",
+    "tz": "Australia/Sydney",
+    "bookedAt": "2026-10-01T00:00:00.000Z",
+    "country": "ZZ",
+    "arrivalForm": "Two adults, arriving in the afternoon after a long drive.",
+    "guestsAdults": 2
+  },
+  {
+    "id": "scr-terse",
+    "propertyName": "Harbour Apartment, 3B",
+    "checkInDate": "2026-12-10",
+    "stdCheckInTime": "15:00",
+    "tz": "Australia/Sydney",
+    "bookedAt": "2026-11-01T00:00:00.000Z",
+    "country": "AU",
+    "arrivalForm": "Hi",
+    "guestsAdults": 2
+  },
+  {
+    "id": "scr-adults",
+    "propertyName": "Summit Lodge",
+    "checkInDate": "2026-12-20",
+    "stdCheckInTime": "15:00",
+    "tz": "Australia/Sydney",
+    "bookedAt": "2026-11-02T00:00:00.000Z",
+    "country": "AU",
+    "arrivalForm": "Nine adults travelling together, arriving in the afternoon.",
+    "guestsAdults": 9
+  },
+  {
+    "id": "scr-clear",
+    "propertyName": "Palm Court 12",
+    "checkInDate": "2027-01-20",
+    "stdCheckInTime": "15:00",
+    "tz": "Australia/Sydney",
+    "bookedAt": "2026-11-15T00:00:00.000Z",
+    "country": "AU",
+    "arrivalForm": "Two adults arriving in the afternoon with one small bag each.",
+    "guestsAdults": 2
+  }
+]

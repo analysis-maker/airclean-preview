@@ -1,0 +1,6 @@
+{
+  "lastMinute": { "enabled": true, "withinHours": 48 },
+  "flaggedCountries": { "enabled": true, "countries": ["ZZ"] },
+  "terseAnswers": { "enabled": true, "minCharacters": 12 },
+  "guestCount": { "enabled": true, "maxAdults": 8 }
+}

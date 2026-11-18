@@ -1,0 +1,16 @@
+[
+  {
+    "property_id": "p_ridge",
+    "arrival_date": "2026-11-20",
+    "status": "READY",
+    "by": "Demo Ops",
+    "reason": "Checked on site"
+  },
+  {
+    "property_id": "p_summit",
+    "arrival_date": "2026-11-22",
+    "status": "HOLD",
+    "by": "Demo Ops",
+    "reason": "Hold until the owner visit is finished"
+  }
+]
