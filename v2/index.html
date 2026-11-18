@@ -10,11 +10,32 @@
       try {
         if (localStorage.getItem("ac-theme") === "dark") document.documentElement.classList.add("dark");
       } catch (e) {}
+      // If the app's entry scripts fail to load (a CDN blip, or a stale index.html after a
+      // deploy), reload once, then fall back to a plain message instead of a blank page.
+      window.addEventListener(
+        "error",
+        function (e) {
+          var el = e.target;
+          if (!el || el.tagName !== "SCRIPT" || el.type !== "module") return;
+          var key = "airclean-boot-reload";
+          try {
+            if (!sessionStorage.getItem(key)) {
+              sessionStorage.setItem(key, "1");
+              location.reload();
+              return;
+            }
+          } catch (err) {}
+          var root = document.getElementById("root");
+          if (root && !root.childElementCount)
+            root.innerHTML =
+              '<div style="font:15px/1.5 system-ui,sans-serif;max-width:420px;margin:18vh auto;padding:0 24px;text-align:center;color:#334155"><p style="font-size:20px;color:#0f172a;margin:0 0 8px">The workspace didn\'t finish loading</p><p style="margin:0 0 16px">The connection dropped while loading. Nothing was lost.</p><button onclick="location.reload()" style="font:inherit;background:#0E7C86;color:#fff;border:0;border-radius:8px;padding:8px 16px;cursor:pointer">Reload</button></div>';
+        },
+        true,
+      );
     </script>
-    <script type="module" crossorigin src="/airclean-preview/v2/assets/index-BZkFZ_-q.js"></script>
+    <script type="module" crossorigin src="/airclean-preview/v2/assets/index-CpZCHwxX.js"></script>
     <link rel="modulepreload" crossorigin href="/airclean-preview/v2/assets/react-uJvdiwSK.js">
-    <link rel="modulepreload" crossorigin href="/airclean-preview/v2/assets/radix-CcMMqbZB.js">
-    <link rel="modulepreload" crossorigin href="/airclean-preview/v2/assets/charts-nI8iJWiO.js">
+    <link rel="modulepreload" crossorigin href="/airclean-preview/v2/assets/radix-BjSiD1hl.js">
     <link rel="stylesheet" crossorigin href="/airclean-preview/v2/assets/index-DoIR2Ykd.css">
   </head>
   <body>
