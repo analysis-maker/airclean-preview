@@ -3,11 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon-phh.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#F4EFE7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1E1C19" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="PHH" />
     <title>Professional Holiday Homes · Demo workspace</title>
     <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(function () {});
+        });
+      }
       try {
         if (localStorage.getItem("ac-theme") === "dark") document.documentElement.classList.add("dark");
       } catch (e) {}
@@ -34,10 +45,10 @@
         true,
       );
     </script>
-    <script type="module" crossorigin src="/airclean-preview/phh-staging/assets/index-DuxVR1xn.js"></script>
+    <script type="module" crossorigin src="/airclean-preview/phh-staging/assets/index-Ds9F4hTn.js"></script>
     <link rel="modulepreload" crossorigin href="/airclean-preview/phh-staging/assets/react-uJvdiwSK.js">
     <link rel="modulepreload" crossorigin href="/airclean-preview/phh-staging/assets/radix-CZpv_NQQ.js">
-    <link rel="stylesheet" crossorigin href="/airclean-preview/phh-staging/assets/index-BCrMkS6Q.css">
+    <link rel="stylesheet" crossorigin href="/airclean-preview/phh-staging/assets/index-BUGyTgGW.css">
   </head>
   <body>
     <div id="root"></div>
