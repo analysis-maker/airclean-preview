@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#F6F5F1">
+  <meta name="theme-color" content="#F4EFE7">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <title>Stayfold preview</title>
   <style>
     :root { --tide: #0E7C86; --tide-dark: #0A626A; --ink: #16222B; --ink-2: #4A5863; --bg: #F6F5F1; --line: #E4E1D8; }
@@ -12,7 +16,7 @@
     .bar { padding: 8px 16px; text-align: center; font-size: 13px; color: var(--ink-2); border-bottom: 1px solid var(--line); background: #fff; }
     main { flex: 1; display: grid; place-items: center; padding: 48px 24px; }
     .card { width: 100%; max-width: 560px; text-align: center; }
-    .mark { width: 56px; height: 56px; margin: 0 auto 20px; color: var(--tide); }
+    .mark { display: block; width: 72px; height: 72px; margin: 0 auto 20px; border-radius: 16px; }
     h1 { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.01em; }
     p.lede { margin: 14px auto 0; max-width: 440px; font-size: 16px; line-height: 1.55; color: var(--ink-2); }
     .links { display: grid; gap: 10px; margin-top: 28px; text-align: left; }
@@ -29,12 +33,7 @@
   <div class="bar">Demo workspace, sample data only</div>
   <main>
     <div class="card">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2.2"/>
-        <path d="M3.5 17.5h25" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M6.5 21.5h19M10 25.5h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M9 17.5a7 7 0 0 1 14 0" fill="currentColor"/>
-      </svg>
+      <img class="mark" src="./icon-192.png" alt="" width="72" height="72">
       <h1>Stayfold</h1>
       <p class="lede">The calm control room for holiday homes. Sample data only. Everything you change stays in this browser.</p>
       <div class="links">
